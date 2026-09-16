@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A simple page for my GitHub class project and class roster."
+    />
+    <title>GitHub Class 2</title>
+    <style>
+      :root {
+        --bg: #0f172a;
+        --panel: #111827;
+        --panel-soft: #1f2937;
+        --primary: #38bdf8;
+        --accent: #a78bfa;
+        --text: #e5e7eb;
+        --muted: #94a3b8;
+        --card: rgba(15, 23, 42, 0.78);
+        --border: rgba(148, 163, 184, 0.25);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(
+          135deg,
+          #020617 0%,
+          #0f172a 50%,
+          #111827 100%
+        );
+        color: var(--text);
+      }
+
+      .container {
+        width: min(1100px, 90%);
+        margin: 0 auto;
+        padding: 48px 0 72px;
+      }
+
+      .hero {
+        background: rgba(15, 23, 42, 0.7);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 48px 32px;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+      }
+
+      .eyebrow {
+        display: inline-block;
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: rgba(56, 189, 248, 0.12);
+        color: var(--primary);
+        font-size: 0.8rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      h1 {
+        margin: 18px 0 12px;
+        font-size: clamp(2.2rem, 5vw, 4rem);
+        line-height: 1.1;
+      }
+
+      .intro {
+        max-width: 700px;
+        color: var(--muted);
+        font-size: 1.08rem;
+        line-height: 1.7;
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 18px;
+        margin-top: 30px;
+      }
+
+      .stat {
+        background: rgba(31, 41, 55, 0.9);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 20px 18px;
+      }
+
+      .stat strong {
+        display: block;
+        font-size: 2rem;
+        color: var(--primary);
+        margin-bottom: 6px;
+      }
+
+      .section-title {
+        margin: 42px 0 20px;
+        font-size: clamp(1.6rem, 3vw, 2.3rem);
+      }
+
+      .roster {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+        gap: 16px;
+      }
+
+      .member {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 18px 16px;
+        transition:
+          transform 0.2s ease,
+          border-color 0.2s ease;
+      }
+
+      .member:hover {
+        transform: translateY(-4px);
+        border-color: rgba(167, 139, 250, 0.7);
+      }
+
+      .member-name {
+        margin: 0;
+        font-size: 1.05rem;
+        font-weight: 700;
+      }
+
+      .member-tag {
+        display: inline-block;
+        margin-top: 10px;
+        font-size: 0.75rem;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: rgba(167, 139, 250, 0.12);
+        color: #ddd6fe;
+        letter-spacing: 0.04em;
+      }
+
+      footer {
+        margin-top: 42px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.94rem;
+      }
+
+      @media (max-width: 640px) {
+        .hero {
+          padding: 32px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <section class="hero">
+        <span class="eyebrow">GitHub Class 2</span>
+        <h1>My collaborative coding class</h1>
+        <p class="intro">
+          This page brings together my classmates and shows the spirit of our
+          GitHub learning journey. We are exploring version control, teamwork,
+          and project-based coding together.
+        </p>
+
+        <div class="stats">
+          <div class="stat">
+            <strong>30+</strong>
+            <span>Class members</span>
+          </div>
+          <div class="stat">
+            <strong>1</strong>
+            <span>Shared repository</span>
+          </div>
+          <div class="stat">
+            <strong>∞</strong>
+            <span>Ideas to build</span>
+          </div>
+        </div>
+      </section>
+
+      <h2 class="section-title">Class roster</h2>
+      <section class="roster" aria-label="Class roster">
+        <article class="member">
+          <p class="member-name">Abhiram</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Agrima S R</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Anjali S</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Aravind</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Aromal J.</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Gowry Rejith</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Anagha T A</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Adithyan M</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Akshaya J S</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Alan Andrew</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Amrutha R S</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Anand</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Anasuya Ganesh</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Anjana M</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Anjana Sugunan B</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Aparna A</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Asna N S</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Aswathy B</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Devaanand S</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Deepak P</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Devika B</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Devkrishnan H P</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Devanandha L S</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Devananda Joshy</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Deni Ben Simon</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Fathima Suhyr</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Gautham G</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Gayathri J</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Gouri P</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Hridaya S R</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Jophin Jith</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Lekshman Suresh</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Muhammad Saffan</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Nandana R</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Aatish Manoj</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Arpitha Balu</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Bhagath P</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Aslah Ashraf</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Adwayth Arun</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Abhijith T</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Abhimanyu M S</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">Adithya K</p>
+          <span class="member-tag">Student</span>
+        </article>
+        <article class="member">
+          <p class="member-name">B S Aswin Raj</p>
+          <span class="member-tag">Student</span>
+        </article>
+      </section>
+
+      <footer>Built for my GitHub class project.</footer>
+    </main>
+  </body>
+</html>
